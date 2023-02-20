@@ -11,6 +11,7 @@ exports.handler = async (event, context) => {
         body: JSON.stringify({
             "version": VERSION,
             "endpoint": API_ENDPOINT,
+            "yes": true,
             "fetch": fetch
         })
     }
