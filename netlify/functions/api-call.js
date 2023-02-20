@@ -5,6 +5,8 @@ const SMAP_ID = process.env.SMAP_ID
 const API_ENDPOINT = `https://platform.smapone.com/Backend/v1/Smaps/${SMAP_ID}/Data?accessToken=${API_TOKEN}`
 const VERSION = process.version
 
+console.log({VERSION})
+
 exports.handler = async (event, context) => {
     return {
         statusCode: 200,
