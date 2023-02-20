@@ -1,5 +1,6 @@
 const API_TOKEN = process.env.API_TOKEN
 const SMAP_ID = process.env.SMAP_ID
+
 const API_ENDPOINT = `https://platform.smapone.com/Backend/v1/Smaps/${SMAP_ID}/Data?accessToken=${API_TOKEN}`
 
 exports.handler = async (event, context) => {
