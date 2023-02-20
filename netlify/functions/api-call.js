@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
     let json
     try {
         response = await fetch(API_ENDPOINT)
-        json = response.json()
+        json = await response.json()
         console.log(json)
 
     // Handle error
