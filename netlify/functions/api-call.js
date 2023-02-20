@@ -5,9 +5,11 @@ const VERSION = process.version
 
 exports.handler = async (event, context) => {
     let response
+    let json
     try {
         response = await fetch(API_ENDPOINT)
-        console.log({response})
+        json = response.json()
+        console.log(json)
 
     // Handle error
     } catch (err) {
@@ -24,7 +26,7 @@ exports.handler = async (event, context) => {
     return {
         statusCode: 200,
         body: JSON.stringify({
-            data: response.json(),
+            data: json,
             endpoint: API_ENDPOINT,
             version: VERSION
         })
