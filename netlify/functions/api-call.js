@@ -19,7 +19,6 @@ exports.handler = async (event, context) => {
     }
 
     // Handle success
-    console.log("Nochmal response", {response})
     return {
         statusCode: 200,
         body: JSON.stringify({
