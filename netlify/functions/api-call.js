@@ -24,7 +24,7 @@ exports.handler = async (event, context) => {
     return {
         statusCode: 200,
         body: JSON.stringify({
-            data: response,
+            data: response.json(),
             endpoint: API_ENDPOINT,
             version: VERSION
         })
